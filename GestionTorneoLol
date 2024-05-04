@@ -1,0 +1,86 @@
+// Colección Deportistas
+{
+  "_id": ObjectId("..."),
+  "nombre": "Nombre del jugador",
+  "apellido": "Apellido del jugador",
+  "nick": "Nickname en el juego",
+  "pais": "País del jugador",
+  "equipo_id": ObjectId("..."), // Referencia al equipo al que pertenece el jugador
+  "partidas_jugadas": 20,
+  "victorias": 15,
+  "derrotas": 5,
+  "asesinatos": 100,
+  "muertes": 50,
+  "asistencias": 80,
+  "farmeo_promedio": 200 // Promedio de minions farmeados por partida
+}
+
+// Colección Equipos
+{
+  "_id": ObjectId("..."),
+  "nombre": "Nombre del equipo",
+  "jugadores": [
+    ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
+    ObjectId("..."),
+    ...
+  ],
+  "entrenador_id": ObjectId("...") // Referencia al entrenador del equipo
+}
+
+// Colección Entrenadores
+{
+  "_id": ObjectId("..."),
+  "nombre": "Nombre del entrenador",
+  "apellido": "Apellido del entrenador",
+  "pais": "País del entrenador"
+}
+
+// Colección Árbitros
+{
+  "_id": ObjectId("..."),
+  "nombre": "Nombre del árbitro",
+  "apellido": "Apellido del árbitro",
+  "pais": "País del árbitro"
+}
+
+// Colección Encuentros Deportivos
+{
+  "_id": ObjectId("..."),
+  "equipo_local_id": ObjectId("..."), // Referencia al equipo local
+  "equipo_visitante_id": ObjectId("..."), // Referencia al equipo visitante
+  "fecha": "Fecha y hora del encuentro",
+  "arbitro_id": ObjectId("...") // Referencia al árbitro asignado al encuentro
+}
+
+// Colección Resultados
+{
+  "_id": ObjectId("..."),
+  "encuentro_id": ObjectId("..."), // Referencia al encuentro deportivo
+  "resultado_local": "Victoria/Derrota", // Resultado del equipo local
+  "resultado_visitante": "Victoria/Derrota" // Resultado del equipo visitante
+}
+
+// Colección Tabla de Posiciones
+{
+  "_id": ObjectId("..."),
+  "equipo_id": ObjectId("..."), // Referencia al equipo
+  "puntos": 10, // Puntos acumulados en el torneo
+  "partidos_jugados": 5, // Cantidad de partidos jugados
+  "partidos_ganados": 3, // Cantidad de partidos ganados
+  "partidos_perdidos": 2, // Cantidad de partidos perdidos
+  "puntuacion": 1500 // Puntuación de clasificación del equipo
+}
+
+// Colección Encuentros Deportivos
+{
+  "_id": ObjectId("..."),
+  "equipo_local_id": ObjectId("..."), // Referencia al equipo local
+  "equipo_visitante_id": ObjectId("..."), // Referencia al equipo visitante
+  "fecha": "Fecha y hora del encuentro",
+  "arbitro_id": ObjectId("..."), // Referencia al árbitro asignado al encuentro
+  "campeones_local": ["Campeón 1", "Campeón 2", ...], // Lista de campeones seleccionados por el equipo local
+  "campeones_visitante": ["Campeón 3", "Campeón 4", ...], // Lista de campeones seleccionados por el equipo visitante
+  "duracion": "Duración de la partida",
+  "resultado": "Victoria/Derrota" // Resultado del encuentro
+}
+
