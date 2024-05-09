@@ -6,13 +6,13 @@
   "nick": "Nickname en el juego",
   "pais": "País del jugador",
   "equipo_id": ObjectId("..."), // Referencia al equipo al que pertenece el jugador
-  "partidas_jugadas": 20,
-  "victorias": 15,
-  "derrotas": 5,
-  "asesinatos": 100,
-  "muertes": 50,
-  "asistencias": 80,
-  "farmeo_promedio": 200 // Promedio de minions farmeados por partida
+  "partidas_jugadas": (int), 
+  "victorias": (int), //por torneo
+  "derrotas": (int), //por torneo
+  "asesinatos": (int), //cuantos players contrarios por torneo, estadísticas
+  "muertes": (int), //del player, por torneo
+  "asistencias": (int), //a otros players de su mismo equipo, por torneo
+  "farmeo_promedio": (int) // Promedio de minions farmeados por partida
 }
 
 // Colección Equipos
