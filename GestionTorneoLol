@@ -1,86 +1,242 @@
-// Colección Deportistas
+//Colección Jugadores
+Db.Jugadores.insertMany(
+[{
+    "_id": ObjectId("1Estral"),
+    "nombre": "Cristóbal",
+    "apellido": "Arróspide",
+    "nick": "Zothve",
+    "pais": "Chile",
+    "equipo_id": ObjectId("Estral"), // Referencia al equipo al que pertenece el jugador
+    "Role": "Top Laner" 
+},
 {
-  "_id": ObjectId("..."),
-  "nombre": "Nombre del jugador",
-  "apellido": "Apellido del jugador",
-  "nick": "Nickname en el juego",
-  "pais": "País del jugador",
-  "equipo_id": ObjectId("..."), // Referencia al equipo al que pertenece el jugador
-  "partidas_jugadas": (int), 
-  "victorias": (int), //por torneo
-  "derrotas": (int), //por torneo
-  "asesinatos": (int), //cuantos players contrarios por torneo, estadísticas
-  "muertes": (int), //del player, por torneo
-  "asistencias": (int), //a otros players de su mismo equipo, por torneo
-  "farmeo_promedio": (int) // Promedio de minions farmeados por partida
-}
-
-// Colección Equipos
+    "_id": ObjectId("2Estral"),
+    "nombre": "Brandon Joel",
+    "apellido": "Villegas",
+    "nick": "Josedeodoo",
+    "pais": "Argentina",
+    "equipo_id": ObjectId("Estral"), // Referencia al equipo al que pertenece el jugador
+    "Role": "Jungler" 
+},
 {
-  "_id": ObjectId("..."),
-  "nombre": "Nombre del equipo",
-  "jugadores": [
-    ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
-    ObjectId("..."),
-    ...
-  ],
-  "entrenador_id": ObjectId("...") // Referencia al entrenador del equipo
-}
-
-// Colección Entrenadores
+    "_id": ObjectId("3Estral"),
+    "nombre": "Cristian Sebastián",
+    "apellido": "Quispe Yampara",
+    "nick": "Cody",
+    "pais": "Chile",
+    "equipo_id": ObjectId("Estral"), // Referencia al equipo al que pertenece el jugador
+    "Role": "Mid Laner" 
+},
 {
-  "_id": ObjectId("..."),
-  "nombre": "Nombre del entrenador",
-  "apellido": "Apellido del entrenador",
-  "pais": "País del entrenador"
-}
-
-// Colección Árbitros
+    "_id": ObjectId("4Estral"),
+    "nombre": "Brian Alejo",
+    "apellido": "Distefano",
+    "nick": "Snaker",
+    "pais": "Argentina",
+    "equipo_id": ObjectId("Estral"), // Referencia al equipo al que pertenece el jugador
+    "Role": "Bot Laner" 
+},
 {
-  "_id": ObjectId("..."),
-  "nombre": "Nombre del árbitro",
-  "apellido": "Apellido del árbitro",
-  "pais": "País del árbitro"
-}
-
-// Colección Encuentros Deportivos
+    "_id": ObjectId("5Estral"),
+    "nombre": "Gabriel",
+    "apellido": "Aparicio",
+    "nick": "Ackerman",
+    "pais": "Argentina",
+    "equipo_id": ObjectId("Estral"), // Referencia al equipo al que pertenece el jugador
+    "Role": "Support"
+},
 {
-  "_id": ObjectId("..."),
-  "equipo_local_id": ObjectId("..."), // Referencia al equipo local
-  "equipo_visitante_id": ObjectId("..."), // Referencia al equipo visitante
-  "fecha": "Fecha y hora del encuentro",
-  "arbitro_id": ObjectId("...") // Referencia al árbitro asignado al encuentro
-}
-
-// Colección Resultados
+    "_id": ObjectId("6Estral"),
+    "nombre": "Héctor Manuel",
+    "apellido": "Delgado Jaramillo",
+    "nick": "Bola",
+    "pais": "Mexico",
+    "equipo_id": ObjectId("Estral"), // Referencia al equipo al que pertenece el jugador
+    "Role": "Sub Bot"
+}]
+)
+  //Colección Equipos
+Db.Equipos.insertMany(
+[{
+    "_id": ObjectId("Estral"),
+    "nombre": "Nombre del equipo",
+    "jugadores": [
+      ObjectId("Estral1"), // Referencias a los deportistas que forman parte del equipo
+      ObjectId("Estral2"),
+      ObjectId("Estral3"),
+      ObjectId("Estral4"),
+      ObjectId("Estral5"),
+      ObjectId("Estral6"),
+    ],
+    "Región":"LLA - Latinoamérica"
+  },
+{  
+    "_id": ObjectId("PSG Talon"),
+    "nombre": "Nombre del equipo",
+    "jugadores": [
+      ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
+      ObjectId("..."),
+      ...
+    ],
+    "Region": "PCS - París Saint German"
+},
 {
-  "_id": ObjectId("..."),
-  "encuentro_id": ObjectId("..."), // Referencia al encuentro deportivo
-  "resultado_local": "Victoria/Derrota", // Resultado del equipo local
-  "resultado_visitante": "Victoria/Derrota" // Resultado del equipo visitante
-}
-
-// Colección Tabla de Posiciones
+    "_id": ObjectId("Gen.G"),
+    "nombre": "Nombre del equipo",
+    "jugadores": [
+      ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
+      ObjectId("..."),
+      ...
+    ],
+    "Region":"NothAM - Norte América"
+},
 {
-  "_id": ObjectId("..."),
-  "equipo_id": ObjectId("..."), // Referencia al equipo
-  "puntos": 10, // Puntos acumulados en el torneo
-  "partidos_jugados": 5, // Cantidad de partidos jugados
-  "partidos_ganados": 3, // Cantidad de partidos ganados
-  "partidos_perdidos": 2, // Cantidad de partidos perdidos
-  "puntuacion": 1500 // Puntuación de clasificación del equipo
-}
-
-// Colección Encuentros Deportivos
+    "_id": ObjectId("Flyquest"),
+    "nombre": "Nombre del equipo",
+    "jugadores": [
+      ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
+      ObjectId("..."),
+      ...
+    ],
+    "Region":"LCK - Corea del Sur"
+  }]
+)
+  
+  // Colección Campeones
+Db.Equipos.insertMany(
+[{
+    "_id": ObjectId("CampeonZothve"),
+    "nombre campeon": "AATROX",
+    "daño de ataque":74,
+    "poder de habilidad":0,
+    "velocidad de ataque":133,
+    "robo de vida": 0,
+    "armadura":97,
+    "resistencia mágica":84
+},
 {
-  "_id": ObjectId("..."),
-  "equipo_local_id": ObjectId("..."), // Referencia al equipo local
-  "equipo_visitante_id": ObjectId("..."), // Referencia al equipo visitante
-  "fecha": "Fecha y hora del encuentro",
-  "arbitro_id": ObjectId("..."), // Referencia al árbitro asignado al encuentro
-  "campeones_local": ["Campeón 1", "Campeón 2", ...], // Lista de campeones seleccionados por el equipo local
-  "campeones_visitante": ["Campeón 3", "Campeón 4", ...], // Lista de campeones seleccionados por el equipo visitante
-  "duracion": "Duración de la partida",
-  "resultado": "Victoria/Derrota" // Resultado del encuentro
-}
+    "_id": ObjectId("CampeonJosedeodo"),
+    "nombre campeon": "SEJUANI",
+    "daño de ataque":123,
+    "poder de habilidad":31,
+    "velocidad de ataque":148,
+    "robo de vida": 0,
+    "armadura":250,
+    "resistencia mágica":210
+},
+{    
+    "_id": ObjectId("CampeonCody"),
+    "nombre campeon": "AHRI",
+    "daño de ataque":102,
+    "poder de habilidad":339,
+    "velocidad de ataque":136,
+    "robo de vida": 0,
+    "armadura":77,
+    "resistencia mágica":75
+},
+{
+    "_id": ObjectId("CampeonSnaker"),
+    "nombre campeon": "KALISTA",
+    "daño de ataque":263,
+    "poder de habilidad":22,
+    "velocidad de ataque":219,
+    "robo de vida": 8,
+    "armadura":80,
+    "resistencia mágica":44
+},
+{   
+    "_id": ObjectId("CampeonAckerman"),
+    "nombre campeon": "RENATA GLASC",
+    "daño de ataque":91,
+    "poder de habilidad":31,
+    "velocidad de ataque":130,
+    "robo de vida": 0,
+    "armadura":103,
+    "resistencia mágica":72
 
+}]
+)
+  
+  // Colección Estadísticas
+  Db.Estadisticas.insertMany(
+  [{
+    "campeon_id": ObjectId("CampeonZothve"),
+    "equipo_id": ObjectId("Estral"), 
+    "jugador_id": ObjectId("1Estral"), 
+    "Encuentro": "Estral Vs R7",
+    "Partida": 1,
+    "fecha_partida":"Abril 6",
+    "Oro obtenido":9363,
+    "Participación en eliminaciones":0.60,
+    "Subditos eliminados":178,
+    "Centinelas colocados":7,
+    "Centinelas destruidos":2,
+    "Daño a campeones":0.27
+  },
+  {
+    "campeon_id": ObjectId("CampeonJosedeodo"),
+    "equipo_id": ObjectId("Estral"), 
+    "jugador_id": ObjectId("2Estral"), 
+    "Encuentro": "Estral Vs R7",
+    "Partida": 1,
+    "fecha_partida":"Abril 6",
+    "Oro obtenido":8376,
+    "Participación en eliminaciones":0.80,
+    "Subditos eliminados":125,
+    "Centinelas colocados":5,
+    "Centinelas destruidos":7,
+    "Daño a campeones":0.12
+  },
+  {
+    "campeon_id": ObjectId("CampeonCody"),
+    "equipo_id": ObjectId("Estral"), 
+    "jugador_id": ObjectId("3Estral"), 
+    "Encuentro": "Estral Vs R7",
+    "Partida": 1,
+    "fecha_partida":"Abril 6",
+    "Oro obtenido":10707,
+    "Participación en eliminaciones":0.70,
+    "Subditos eliminados":181,
+    "Centinelas colocados":9,
+    "Centinelas destruidos":2,
+    "Daño a campeones":0.28
+  },
+  {
+    "campeon_id": ObjectId("CampeonSnaker"),
+    "equipo_id": ObjectId("Estral"), 
+    "jugador_id": ObjectId("4Estral"), 
+    "Encuentro": "Estral Vs R7",
+    "Partida": 1,
+    "fecha_partida":"Abril 6",
+    "Oro obtenido":9455,
+    "Participación en eliminaciones":0.55,
+    "Subditos eliminados":190,
+    "Centinelas colocados":7,
+    "Centinelas destruidos":7,
+    "Daño a campeones":0.19
+  },
+  {
+    "campeon_id": ObjectId("CampeonAckerman"),
+    "equipo_id": ObjectId("Estral"), 
+    "jugador_id": ObjectId("4Estral"), 
+    "Encuentro": "Estral Vs R7",
+    "Partida": 1,
+    "fecha_partida":"Abril 6",
+    "Oro obtenido":6902,
+    "Participación en eliminaciones":0.85,
+    "Subditos eliminados":14,
+    "Centinelas colocados":36,
+    "Centinelas destruidos":2,
+    "Daño a campeones":0.14
+  },
+]
+  
+  // Colección Resultados
+Db.Resultados.insertOne(
+  [{
+    "_id": ObjectId("Encuentro0406"),
+    "Encuentro": "Estral Vs R7",
+    "resultado_Estral": "Victoria", 
+    "resultado_R7": "Derrota",
+    "Partidas totales":3
+  }]
