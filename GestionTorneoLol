@@ -56,7 +56,7 @@ Db.Jugadores.insertMany(
 }]
 )
   //Colección Equipos
-Db.Equipos.insertMany(
+Db.Equipos.insertOne(
 [{
     "_id": ObjectId("Estral"),
     "nombre": "Nombre del equipo",
@@ -69,36 +69,6 @@ Db.Equipos.insertMany(
       ObjectId("Estral6"),
     ],
     "Región":"LLA - Latinoamérica"
-  },
-{  
-    "_id": ObjectId("PSG Talon"),
-    "nombre": "Nombre del equipo",
-    "jugadores": [
-      ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
-      ObjectId("..."),
-      ...
-    ],
-    "Region": "PCS - París Saint German"
-},
-{
-    "_id": ObjectId("Gen.G"),
-    "nombre": "Nombre del equipo",
-    "jugadores": [
-      ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
-      ObjectId("..."),
-      ...
-    ],
-    "Region":"NothAM - Norte América"
-},
-{
-    "_id": ObjectId("Flyquest"),
-    "nombre": "Nombre del equipo",
-    "jugadores": [
-      ObjectId("..."), // Referencias a los deportistas que forman parte del equipo
-      ObjectId("..."),
-      ...
-    ],
-    "Region":"LCK - Corea del Sur"
   }]
 )
   
