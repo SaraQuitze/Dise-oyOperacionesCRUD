@@ -59,7 +59,7 @@ Db.Jugadores.insertMany(
 Db.Equipos.insertOne(
 [{
     "_id": ObjectId("Estral"),
-    "nombre": "Nombre del equipo",
+    "nombre": "Estral",
     "jugadores": [
       ObjectId("Estral1"), // Referencias a los deportistas que forman parte del equipo
       ObjectId("Estral2"),
